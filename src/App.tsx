@@ -1,12 +1,17 @@
 import "./App.scss";
-
-// Premissas:
-// App de pedido de comida, estilo iFood
-// Recursos:
-// Página de Lista de Restaurantes
-// Página de Produtos do Restaurante
+import CaixaRestaurante from "./components/CaixaRestaurante";
 
 function App() {
+  const restauranteDonaFlorinda = {
+    nome: "Nonna's Trattoria",
+    descricao:
+      "Um refúgio italiano onde a família se reúne para saborear pratos caseiros.",
+    avaliacao: 4.3,
+    categoria: "Italiana",
+    tempoEntrega: 40,
+    valorEntrega: 6,
+  };
+
   return (
     <>
       <header>
@@ -24,19 +29,7 @@ function App() {
         <section>
           <h2>Restaurantes</h2>
           <ul className="grid" role="list">
-            <li className="restaurant-box">
-              <h3>El Rancho Tex-Mex</h3>
-              <div className="details">
-                <span className="small-details">4.4</span>
-                <span className="small-details">Italiana</span>
-                <span className="small-details">30~40 min</span>
-                <span className="small-details">R$ 5</span>
-              </div>
-              <p>
-                Autêntica cozinha mexicana com uma pitada de sabor do Velho
-                Oeste.
-              </p>
-            </li>
+            <CaixaRestaurante restaurante={restauranteDonaFlorinda} />
           </ul>
         </section>
         <section>
