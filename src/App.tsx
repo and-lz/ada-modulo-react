@@ -1,4 +1,6 @@
+import { useState } from "react";
 import "./App.scss";
+import CaixaItem from "./components/CaixaItem";
 import CaixaRestaurante from "./components/CaixaRestaurante";
 
 function App() {
@@ -10,7 +12,17 @@ function App() {
     categoria: "Italiana",
     tempoEntrega: 40,
     valorEntrega: 6,
+    cardapio: [
+      {
+        nome: "Spaghetti Carbonara",
+        descricao: "Massa italiana com molho de queijo, bacon e ovo",
+        preco: 15,
+      },
+    ],
   };
+  const [carrinho, definirCarrinho] = useState([]);
+
+  function aoAtualizar() {}
 
   return (
     <>
@@ -19,8 +31,18 @@ function App() {
           <div className="row">
             <span>Boas vindas, [nome da pessoa]</span>
             <div className="shopping-cart">
-              carrinho de compras
+              <button>carrinho de compras</button>
               <span className="badge">2</span>
+              <div className="list">
+                <ul role="list">
+                  <li>
+                    <span>3x</span>
+                    <span>Nome do Item</span>
+                    <span>R$ 100</span>
+                  </li>
+                </ul>
+                <div className="total">Total: R$ 900</div>
+              </div>
             </div>
           </div>
         </div>
@@ -39,18 +61,10 @@ function App() {
             role="list"
             style={{ "--max": "200px" } as React.CSSProperties}
           >
-            <li>
-              <h3>Nome do item</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae,
-                ipsa.
-              </p>
-              <div className="counter">
-                <button>-</button>
-                <span>0</span>
-                <button>+</button>
-              </div>
-            </li>
+            <CaixaItem
+              aoAtualizar={aoAtualizar}
+              item={restauranteDonaFlorinda.cardapio[0]}
+            />
           </ul>
         </section>
       </div>

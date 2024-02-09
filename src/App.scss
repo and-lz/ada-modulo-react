@@ -14,6 +14,10 @@
     "Helvetica Neue", Arial, sans-serif;
 }
 
+strong {
+  font-weight: 900;
+}
+
 * {
   margin: 0; /* Set the default margin to 0 */
   padding: 0; /* Set the default padding to 0 */
@@ -25,12 +29,46 @@
   position: relative;
   display: flex;
   align-items: baseline;
+  button {
+    background-color: transparent;
+    border: 0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    padding-right: 1.5rem;
+    &:hover {
+      background-color: var(--red-ifood);
+      color: white;
+    }
+  }
   .badge {
     background-color: var(--red-ifood);
     color: white;
     padding: 5px 10px;
     border-radius: 100%;
-    margin-left: 0.3rem;
+    margin-left: -1rem;
+  }
+  .list {
+    position: absolute;
+    top: 40px;
+    padding: 1rem 2rem;
+    right: 0;
+    width: 400px;
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    z-index: 99;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .total {
+    padding-top: 0.5rem;
+    border-top: 1px solid #ccc;
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: 600;
   }
 }
 
