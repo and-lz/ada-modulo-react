@@ -4,7 +4,7 @@
     "descricao": "Uma pitoresca brasserie francesa com pratos clássicos e ambiente acolhedor.",
     "avaliacao": 4.5,
     "categoria": "Francesa",
-    "tempo_de_entrega": 40,
+    "tempoEntrega": 40,
     "cardapio": [
       {
         "nome": "Coeur de Boeuf",
@@ -28,7 +28,7 @@
     "descricao": "Um santuário gastronômico japonês oferecendo os melhores sabores do Oriente.",
     "avaliacao": 4.2,
     "categoria": "Japonesa",
-    "tempo_de_entrega": 35,
+    "tempoEntrega": 35,
     "cardapio": [
       {
         "nome": "Sashimi Moriawase",
@@ -52,7 +52,7 @@
     "descricao": "Autêntica cozinha mexicana com uma pitada de sabor do Velho Oeste.",
     "avaliacao": 4.1,
     "categoria": "Mexicana",
-    "tempo_de_entrega": 45,
+    "tempoEntrega": 45,
     "cardapio": [
       {
         "nome": "Tacos Al Pastor",
@@ -76,7 +76,7 @@
     "descricao": "Um refúgio italiano onde a família se reúne para saborear pratos caseiros.",
     "avaliacao": 4.3,
     "categoria": "Italiana",
-    "tempo_de_entrega": 40,
+    "tempoEntrega": 40,
     "cardapio": [
       {
         "nome": "Spaghetti Carbonara",
@@ -100,7 +100,7 @@
     "descricao": "O verdadeiro sabor do sul americano com carnes defumadas e molhos irresistíveis.",
     "avaliacao": 4.6,
     "categoria": "Americana",
-    "tempo_de_entrega": 50,
+    "tempoEntrega": 50,
     "cardapio": [
       {
         "nome": "Brisket Defumado",
@@ -124,7 +124,7 @@
     "descricao": "Um festival de sabores mexicanos autênticos em cada prato preparado com paixão.",
     "avaliacao": 4.0,
     "categoria": "Mexicana",
-    "tempo_de_entrega": 35,
+    "tempoEntrega": 35,
     "cardapio": [
       {
         "nome": "Chili Con Carne",
@@ -148,7 +148,7 @@
     "descricao": "O sabor autêntico da Itália em cada fatia de pizza artesanalmente preparada.",
     "avaliacao": 4.4,
     "categoria": "Italiana",
-    "tempo_de_entrega": 30,
+    "tempoEntrega": 30,
     "cardapio": [
       {
         "nome": "Margherita",
@@ -172,7 +172,7 @@
     "descricao": "Uma jornada culinária pela China com pratos autênticos e sabores surpreendentes.",
     "avaliacao": 4.2,
     "categoria": "Chinesa",
-    "tempo_de_entrega": 40,
+    "tempoEntrega": 40,
     "cardapio": [
       {
         "nome": "Frango Xadrez",
@@ -196,7 +196,7 @@
     "descricao": "O paraíso dos hambúrgueres artesanais com combinações ousadas e sabores irresistíveis.",
     "avaliacao": 4.3,
     "categoria": "Hamburgueria",
-    "tempo_de_entrega": 35,
+    "tempoEntrega": 35,
     "cardapio": [
       {
         "nome": "Classic Burger",
@@ -220,7 +220,7 @@
     "descricao": "Um refúgio acolhedor para os amantes de café com delícias francesas e aromas irresistíveis.",
     "avaliacao": 4.6,
     "categoria": "Cafeteria",
-    "tempo_de_entrega": 25,
+    "tempoEntrega": 25,
     "cardapio": [
       {
         "nome": "Croissant de Chocolate",
@@ -244,7 +244,7 @@
     "descricao": "Uma viagem gastronômica à Índia com especiarias exóticas e pratos deliciosamente aromáticos.",
     "avaliacao": 4.1,
     "categoria": "Indiana",
-    "tempo_de_entrega": 50,
+    "tempoEntrega": 50,
     "cardapio": [
       {
         "nome": "Butter Chicken",
