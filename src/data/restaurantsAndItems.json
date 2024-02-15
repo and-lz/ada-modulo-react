@@ -2,7 +2,6 @@
   {
     "nome": "Chez Pierre",
     "descricao": "Uma pitoresca brasserie francesa com pratos clássicos e ambiente acolhedor.",
-    "avaliacao": 4.5,
     "categoria": "Francesa",
     "tempoEntrega": 40,
     "cardapio": [

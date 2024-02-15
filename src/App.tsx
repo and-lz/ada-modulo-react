@@ -1,15 +1,9 @@
-import { useState } from "react";
 import "./App.scss";
-import CaixaRestaurante from "./components/CaixaRestaurante";
-import restaurantes from "./data/restaurantsAndItems.json";
+import PaginaCardapioRestaurante from "./pages/PaginaCardapioRestaurante";
+import PaginaRestaurantes from "./pages/PaginaRestaurantes";
 
 function App() {
-  const [restauranteEscolhido, definirRestaurenteEscolhido] = useState("");
-
-  function escolherRestaurante(restauranteEscolhido) {
-    definirRestaurenteEscolhido(restauranteEscolhido);
-  }
-
+  const pagina = "home";
   return (
     <>
       <header>
@@ -24,31 +18,8 @@ function App() {
         </div>
       </header>
       <div className="container">
-        <section>
-          <h2>Restaurantes</h2>
-          <ul className="grid" role="list">
-            {restaurantes.map((restaurante) => (
-              <button onClick={() => escolherRestaurante(restaurante)}>
-                <CaixaRestaurante
-                  key={restaurante.nome}
-                  restaurante={restaurante}
-                />
-              </button>
-            ))}
-          </ul>
-        </section>
-        {restauranteEscolhido !== "" ? (
-          <section>
-            <h2>Itens do Restaurante {restauranteEscolhido.nome}</h2>
-            <ul
-              className="grid"
-              role="list"
-              style={{ "--max": "200px" } as React.CSSProperties}
-            ></ul>
-          </section>
-        ) : (
-          <></>
-        )}
+        {pagina === "home" ? <PaginaRestaurantes /> : ""}
+        {pagina === "restaurantes" ? <PaginaCardapioRestaurante /> : ""}
       </div>
     </>
   );
