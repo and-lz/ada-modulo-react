@@ -14,6 +14,12 @@ function PaginaCardapioRestaurante() {
       <Link to={"/"}>‹ Todos os restaurantes</Link>
       <h1>{restaurante.nome}</h1>
       <p className="intro">{restaurante.descricao}</p>
+      <input
+        type="text"
+        id="search"
+        placeholder="Pesquisar pelo nome do item ou descrição..."
+      />
+      <label htmlFor="search">🔎</label>
       <ul
         className="grid"
         role="list"

@@ -238,3 +238,33 @@ small {
   font-size: 0.9em;
   font-weight: 200;
 }
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: transparent;
+  border: 0;
+  border: 2px solid transparent;
+  margin: 1rem 0;
+  padding-left: 3rem;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  &:focus {
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    transform: scale(0.99);
+    background-color: var(--gray);
+    border: 2px solid var(--red-ifood);
+    & + label {
+      opacity: 1;
+      margin-left: 1.2rem;
+    }
+  }
+  & + label {
+    position: absolute;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    margin-top: -4rem;
+    opacity: 0.5;
+  }
+}
