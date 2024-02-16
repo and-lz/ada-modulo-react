@@ -12,13 +12,22 @@
   box-sizing: border-box; /* Set the sizing of an element to include it's border */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
   margin: 0; /* Set the default margin to 0 */
   padding: 0; /* Set the default padding to 0 */
   margin-bottom: 0.5em;
-  text-wrap: pretty;
+  text-wrap: balance;
+  hyphens: auto;
 }
 
 .shopping-cart {
@@ -65,6 +74,7 @@ input,
 button,
 textarea,
 select {
+  text-align: left;
   font: inherit; /* Makes these elements inherit fonts */
 }
 
@@ -113,17 +123,37 @@ header {
   }
 }
 
+a[href="/"] {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--red-ifood);
+}
+
+.page-title {
+  color: var(--red-ifood);
+}
+
+h1 {
+  font-weight: 100;
+  font-size: clamp(3.125rem, 3.464vw + 2.229rem, 5rem);
+  line-height: clamp(4.688rem, 3.349vw + 3.821rem, 6.5rem);
+}
+
 .grid {
   --max: 280px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--max), 1fr));
-  grid-gap: 10px;
+  grid-gap: 1rem;
+  margin: 3rem 0;
   & > * {
     padding: 1rem;
     // border: 1px solid currentColor;
     border-radius: 5px;
-    background-color: #fff;
-    border: 2px solid transparent;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.05);
     will-change: background, scale, box-shadow, color;
     &:hover,
     &:focus,
@@ -132,6 +162,7 @@ header {
       box-shadow: 0px 10px 40px 5px rgba(0, 0, 0, 0.1);
       box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
       border: 2px solid var(--red-ifood);
+      background-color: #fff;
     }
   }
 }
@@ -139,10 +170,11 @@ header {
 .counter {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
   align-items: baseline;
   & button {
-    background-color: var(--gray);
+    background-color: transparent;
     color: var(--black);
     border: 0;
     border-radius: 1000px;
@@ -161,8 +193,9 @@ header {
 .small-details {
   text-transform: uppercase;
   font-size: 0.75em;
-  &::after {
+  &:not(:last-child)::after {
     content: " • ";
+    font-size: 1rem;
   }
 }
 
@@ -171,7 +204,7 @@ section {
 }
 
 p {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .restaurant-box {
@@ -179,5 +212,29 @@ p {
     display: flex;
     // justify-content: space-between;
     gap: 10px;
+    align-items: baseline;
   }
+}
+
+.intro {
+  font-size: 1.7rem;
+  opacity: 0.6;
+  line-height: 1.2;
+  font-weight: 200;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.1em;
+}
+
+.price {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+small {
+  font-size: 0.9em;
+  font-weight: 200;
 }

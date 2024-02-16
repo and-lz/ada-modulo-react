@@ -30,10 +30,10 @@ export default function CaixaItemRestaurante(props: CaixaItemRestauranteProps) {
 
   return (
     <li>
-      <h3>{nome}</h3>
-      <p>
-        {descricao} / R${preco},00
-      </p>
+      <h3>
+        {nome} / <small>R${preco},00</small>
+      </h3>
+      <p>{descricao}</p>
       {preco > 0 ? (
         <div className="counter">
           <button onClick={diminuirQuantidade}>-</button>

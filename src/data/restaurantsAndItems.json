@@ -1,22 +1,27 @@
 [
   {
     "nome": "Chez Pierre",
+    "slug": "chez-pierre",
     "descricao": "Uma pitoresca brasserie francesa com pratos clássicos e ambiente acolhedor.",
     "categoria": "Francesa",
+    "avaliacao": 4,
     "tempoEntrega": 40,
     "cardapio": [
       {
         "nome": "Coeur de Boeuf",
+        "slug": "coeur-de-boeuf",
         "descricao": "Filé mignon grelhado com molho de vinho tinto",
         "preco": 25
       },
       {
         "nome": "Canard à l'Orange",
+        "slug": "canard-a-l-orange",
         "descricao": "Pato assado com molho de laranja e ervas",
         "preco": 30
       },
       {
         "nome": "Tarte Tatin",
+        "slug": "tarte-tatin",
         "descricao": "Torta de maçã caramelizada com massa folhada",
         "preco": 12
       }
@@ -24,6 +29,7 @@
   },
   {
     "nome": "Sakura Sushi House",
+    "slug": "sakura-sushi-house",
     "descricao": "Um santuário gastronômico japonês oferecendo os melhores sabores do Oriente.",
     "avaliacao": 4.2,
     "categoria": "Japonesa",
@@ -31,16 +37,19 @@
     "cardapio": [
       {
         "nome": "Sashimi Moriawase",
+        "slug": "sashimi-moriawase",
         "descricao": "Seleção de sashimi fresco",
         "preco": 20
       },
       {
         "nome": "Tempura Misto",
+        "slug": "tempura-misto",
         "descricao": "Frutos do mar e legumes empanados e fritos",
         "preco": 18
       },
       {
         "nome": "Dragon Roll",
+        "slug": "dragon-roll",
         "descricao": "Rolinho de sushi com camarão empanado e abacate",
         "preco": 16
       }
@@ -48,6 +57,7 @@
   },
   {
     "nome": "El Rancho Tex-Mex",
+    "slug": "el-rancho-tex-mex",
     "descricao": "Autêntica cozinha mexicana com uma pitada de sabor do Velho Oeste.",
     "avaliacao": 4.1,
     "categoria": "Mexicana",
@@ -55,16 +65,19 @@
     "cardapio": [
       {
         "nome": "Tacos Al Pastor",
+        "slug": "tacos-al-pastor",
         "descricao": "Tacos de carne de porco marinada com abacaxi e coentro",
         "preco": 10
       },
       {
         "nome": "Burrito Grande",
+        "slug": "burrito-grande",
         "descricao": "Burrito grande com carne, feijão, arroz e guacamole",
         "preco": 12
       },
       {
         "nome": "Enchiladas Verdes",
+        "slug": "enchiladas-verdes",
         "descricao": "Enchiladas de frango com molho verde picante",
         "preco": 11
       }
@@ -72,6 +85,7 @@
   },
   {
     "nome": "Nonna's Trattoria",
+    "slug": "nonnas-trattoria",
     "descricao": "Um refúgio italiano onde a família se reúne para saborear pratos caseiros.",
     "avaliacao": 4.3,
     "categoria": "Italiana",
@@ -79,16 +93,19 @@
     "cardapio": [
       {
         "nome": "Spaghetti Carbonara",
+        "slug": "spaghetti-carbonara",
         "descricao": "Massa italiana com molho de queijo, bacon e ovo",
         "preco": 15
       },
       {
         "nome": "Penne alla Vodka",
+        "slug": "penne-alla-vodka",
         "descricao": "Penne com molho de tomate e vodka cremoso",
         "preco": 14
       },
       {
         "nome": "Tiramisu",
+        "slug": "tiramisu",
         "descricao": "Sobremesa clássica italiana de café e mascarpone",
         "preco": 8
       }
@@ -96,6 +113,7 @@
   },
   {
     "nome": "Big Bob's BBQ",
+    "slug": "big-bobs-bbq",
     "descricao": "O verdadeiro sabor do sul americano com carnes defumadas e molhos irresistíveis.",
     "avaliacao": 4.6,
     "categoria": "Americana",
@@ -103,16 +121,19 @@
     "cardapio": [
       {
         "nome": "Brisket Defumado",
+        "slug": "brisket-defumado",
         "descricao": "Brisket defumado lentamente por 12 horas",
         "preco": 22
       },
       {
         "nome": "Costela de Porco",
+        "slug": "costela-de-porco",
         "descricao": "Costela de porco grelhada com molho barbecue",
         "preco": 18
       },
       {
         "nome": "Batata Frita com Queijo",
+        "slug": "batata-frita-com-queijo",
         "descricao": "Batatas fritas cobertas com queijo cheddar e bacon",
         "preco": 10
       }
@@ -120,6 +141,7 @@
   },
   {
     "nome": "Pancho's Cantina",
+    "slug": "panchos-cantina",
     "descricao": "Um festival de sabores mexicanos autênticos em cada prato preparado com paixão.",
     "avaliacao": 4.0,
     "categoria": "Mexicana",
@@ -127,16 +149,19 @@
     "cardapio": [
       {
         "nome": "Chili Con Carne",
+        "slug": "chili-con-carne",
         "descricao": "Prato picante de carne e feijão",
         "preco": 13
       },
       {
         "nome": "Fajitas de Frango",
+        "slug": "fajitas-de-frango",
         "descricao": "Fajitas de frango grelhado com pimentões e cebolas",
         "preco": 15
       },
       {
         "nome": "Quesadilla de Camarão",
+        "slug": "quesadilla-de-camarao",
         "descricao": "Quesadilla de camarão com queijo e guacamole",
         "preco": 14
       }
@@ -144,6 +169,7 @@
   },
   {
     "nome": "Mama Rosa's Pizzeria",
+    "slug": "mama-rosas-pizzeria",
     "descricao": "O sabor autêntico da Itália em cada fatia de pizza artesanalmente preparada.",
     "avaliacao": 4.4,
     "categoria": "Italiana",
@@ -151,16 +177,19 @@
     "cardapio": [
       {
         "nome": "Margherita",
+        "slug": "margherita",
         "descricao": "Pizza clássica com molho de tomate, mussarela e manjericão",
         "preco": 12
       },
       {
         "nome": "Pepperoni",
+        "slug": "pepperoni",
         "descricao": "Pizza com pepperoni picante e queijo",
         "preco": 14
       },
       {
         "nome": "Calzone",
+        "slug": "calzone",
         "descricao": "Calzone recheado com presunto, queijo e cogumelos",
         "preco": 16
       }
@@ -168,6 +197,7 @@
   },
   {
     "nome": "Dragon Palace",
+    "slug": "dragon-palace",
     "descricao": "Uma jornada culinária pela China com pratos autênticos e sabores surpreendentes.",
     "avaliacao": 4.2,
     "categoria": "Chinesa",
@@ -175,16 +205,19 @@
     "cardapio": [
       {
         "nome": "Frango Xadrez",
+        "slug": "frango-xadrez",
         "descricao": "Frango com pimentão, cebola e molho de soja",
         "preco": 12
       },
       {
         "nome": "Rolinho Primavera",
+        "slug": "rolinho-primavera",
         "descricao": "Rolinhos primavera crocantes com legumes e molho agridoce",
         "preco": 8
       },
       {
         "nome": "Arroz Chop Suey",
+        "slug": "arroz-chop-suey",
         "descricao": "Arroz frito com legumes e carne de porco em molho agridoce",
         "preco": 10
       }
@@ -192,6 +225,7 @@
   },
   {
     "nome": "The Burger Joint",
+    "slug": "the-burger-joint",
     "descricao": "O paraíso dos hambúrgueres artesanais com combinações ousadas e sabores irresistíveis.",
     "avaliacao": 4.3,
     "categoria": "Hamburgueria",
@@ -199,16 +233,19 @@
     "cardapio": [
       {
         "nome": "Classic Burger",
+        "slug": "classic-burger",
         "descricao": "Hambúrguer clássico com alface, tomate e queijo",
         "preco": 10
       },
       {
         "nome": "BBQ Bacon Burger",
+        "slug": "bbq-bacon-burger",
         "descricao": "Hambúrguer com bacon crocante e molho barbecue",
         "preco": 12
       },
       {
         "nome": "Vegetarian Burger",
+        "slug": "vegetarian-burger",
         "descricao": "Hambúrguer vegetariano com cogumelos e queijo de cabra",
         "preco": 11
       }
@@ -216,6 +253,7 @@
   },
   {
     "nome": "Café Parisien",
+    "slug": "cafe-parisien",
     "descricao": "Um refúgio acolhedor para os amantes de café com delícias francesas e aromas irresistíveis.",
     "avaliacao": 4.6,
     "categoria": "Cafeteria",
@@ -223,16 +261,19 @@
     "cardapio": [
       {
         "nome": "Croissant de Chocolate",
+        "slug": "croissant-de-chocolate",
         "descricao": "Croissant folhado recheado com chocolate derretido",
         "preco": 5
       },
       {
         "nome": "Cappuccino",
+        "slug": "cappuccino",
         "descricao": "Café espresso com leite vaporizado e espuma de leite",
         "preco": 4
       },
       {
         "nome": "Torta de Frutas Frescas",
+        "slug": "torta-de-frutas-frescas",
         "descricao": "Torta de frutas frescas da estação com creme de confeiteiro",
         "preco": 6
       }
@@ -240,6 +281,7 @@
   },
   {
     "nome": "Taj Mahal",
+    "slug": "taj-mahal",
     "descricao": "Uma viagem gastronômica à Índia com especiarias exóticas e pratos deliciosamente aromáticos.",
     "avaliacao": 4.1,
     "categoria": "Indiana",
@@ -247,16 +289,19 @@
     "cardapio": [
       {
         "nome": "Butter Chicken",
+        "slug": "butter-chicken",
         "descricao": "Frango cozido em molho de tomate, creme e manteiga",
         "preco": 16
       },
       {
         "nome": "Chicken Biryani",
+        "slug": "chicken-biryani",
         "descricao": "Arroz basmati com frango, especiarias e ervas",
         "preco": 14
       },
       {
         "nome": "Saag Paneer",
+        "slug": "saag-paneer",
         "descricao": "Espinafre refogado com queijo paneer",
         "preco": 12
       }

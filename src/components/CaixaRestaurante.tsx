@@ -1,37 +1,37 @@
+import { Link } from "react-router-dom";
 import Avaliacoes from "./Avalicoes";
 
+export interface Restaurante {
+  nome: string;
+  slug: string;
+  avaliacao: number;
+  categoria: string;
+  tempoEntrega: number;
+  descricao: string;
+}
 interface CaixaRestauranteProps {
-  restaurante: {
-    nome: string;
-    avaliacao: number;
-    categoria: string;
-    tempoEntrega: number;
-    descricao: string;
-  };
+  restaurante: Restaurante;
 }
 
 function CaixaRestaurante(props: CaixaRestauranteProps) {
   const {
-    restaurante: { nome, avaliacao, categoria, tempoEntrega, descricao },
+    restaurante: { nome, avaliacao, categoria, tempoEntrega, descricao, slug },
   } = props;
-  //   const { categoria, nome = "Padrão" } = props;
-  //   const categoria = props.categoria;
-  //   const nome = props.nome;
 
   return (
-    <>
-      <li className="restaurant-box">
-        <h1>{nome}</h1>
+    <li className="restaurant-box">
+      <Link to={`${slug}/cardapio`}>
+        <h2>📍 {nome}</h2>
         <div className="details">
-          <span className="small-details">
-            <Avaliacoes avaliacao={avaliacao}  />
-          </span>
           <span className="small-details">{categoria}</span>
-          <span className="small-details">{tempoEntrega}</span>
+          <span className="small-details">
+            <Avaliacoes avaliacao={avaliacao} />
+          </span>
+          <span className="small-details">🚚 {tempoEntrega} mins</span>
         </div>
         <p>{descricao}</p>
-      </li>
-    </>
+      </Link>
+    </li>
   );
 }
 

@@ -1,16 +1,31 @@
+import { Link, useParams } from "react-router-dom";
+import restaurantes from "../data/restaurantsAndItems.json";
+import CaixaItemRestaurante from "../components/CaixaItemRestaurante";
+
 function PaginaCardapioRestaurante() {
+  const { slug } = useParams();
+
+  const restaurante = restaurantes.filter(
+    (restaurante) => restaurante.slug === slug
+  )[0];
+
   return (
-    <>
-      <section>
-        <h2>Itens do Restaurante XYZ</h2>
-        <p>Cardapio especifico do restaurante escolhido</p>
-        <ul
-          className="grid"
-          role="list"
-          style={{ "--max": "200px" } as React.CSSProperties}
-        ></ul>
-      </section>
-    </>
+    <section>
+      <Link to={"/"}>‹ Todos os restaurantes</Link>
+      <h1>{restaurante.nome}</h1>
+      <p className="intro">{restaurante.descricao}</p>
+      <ul
+        className="grid"
+        role="list"
+        style={{ "--max": "300px" } as React.CSSProperties}
+      >
+        {restaurante.cardapio.map((item) => (
+          <>
+            <CaixaItemRestaurante item={item} />
+          </>
+        ))}
+      </ul>
+    </section>
   );
 }
 

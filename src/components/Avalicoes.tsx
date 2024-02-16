@@ -4,7 +4,7 @@ function Avaliacoes(props) {
   const avaliacao = props.avaliacao;
   const [nota, definirNota] = useState();
 
-  if (avaliacao) return <>{avaliacao}</>;
+  if (avaliacao) return <>⭐ {avaliacao}</>;
 
   return (
     <>

@@ -5,8 +5,6 @@ import PaginaRestaurantes from "./pages/PaginaRestaurantes";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const pagina = "home";
-
   return (
     <>
       <header>
@@ -20,14 +18,13 @@ function App() {
           </div>
         </div>
       </header>
-      {/* <div className="container">
-        {pagina === "home" ? <PaginaRestaurantes /> : ""}
-        {pagina === "restaurantes" ? <PaginaCardapioRestaurante /> : ""}
-      </div> */}
       <div className="container">
         <Routes>
           <Route path="/" element={<PaginaRestaurantes />} />
-          <Route path="cardapio" element={<PaginaCardapioRestaurante />} />
+          <Route
+            path="/:slug/cardapio"
+            element={<PaginaCardapioRestaurante />}
+          />
         </Routes>
       </div>
     </>
