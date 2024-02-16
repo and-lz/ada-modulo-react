@@ -2,7 +2,7 @@ import "./App.scss";
 import PaginaCardapioRestaurante from "./pages/PaginaCardapioRestaurante";
 import PaginaRestaurantes from "./pages/PaginaRestaurantes";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <header>
         <div className="container">
           <div className="row">
-            <span>Boas vindas, [nome da pessoa]</span>
+            <Link to={"/"}>🏠</Link>
             <div className="shopping-cart">
               carrinho de compras
               <span className="badge">0</span>

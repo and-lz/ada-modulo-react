@@ -119,6 +119,7 @@ header {
   }
   .row {
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
   }
 }
@@ -267,4 +268,8 @@ input {
     margin-top: -4rem;
     opacity: 0.5;
   }
+}
+
+header .row a {
+  font-size: 3rem;
 }
