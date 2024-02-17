@@ -3,10 +3,10 @@ import restaurantes from "../data/restaurantsAndItems.json";
 import CaixaItemRestaurante from "../components/CaixaItemRestaurante";
 
 function PaginaCardapioRestaurante() {
-  const { slug } = useParams();
+  const { slug: idDaUrl } = useParams();
 
   const restaurante = restaurantes.filter(
-    (restaurante) => restaurante.slug === slug
+    (restaurante) => restaurante.slug === idDaUrl
   )[0];
 
   return (

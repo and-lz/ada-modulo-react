@@ -13,12 +13,7 @@ function PaginaRestaurantes() {
       <label htmlFor="search">🔎</label>
       <ul className="grid" role="list">
         {restaurantes.map((restaurante) => (
-          <button>
-            <CaixaRestaurante
-              key={restaurante.slug}
-              restaurante={restaurante}
-            />
-          </button>
+          <CaixaRestaurante key={restaurante.slug} restaurante={restaurante} />
         ))}
       </ul>
     </section>

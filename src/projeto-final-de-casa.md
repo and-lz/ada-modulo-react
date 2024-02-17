@@ -8,7 +8,7 @@ Este projeto é uma plataforma web onde os usuários podem visualizar uma lista 
 
    - Exibe uma lista de receitas culinárias em cards.
    - Cada card exibe a imagem da receita, título e breve descrição.
-   - Os dados das receitas são estáticos (hardcoded no código).
+   - Os dados das receitas são estáticos vindo do JSON fornecido.
 
 2. **Detalhes da Receita (/recipe/:id):**
 
