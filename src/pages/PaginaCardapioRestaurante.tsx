@@ -1,7 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import restaurantes from "../data/restaurantsAndItems.json";
 import CaixaItemRestaurante from "../components/CaixaItemRestaurante";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import TituloPagina from "../components/TituloPagina";
 
 function PaginaCardapioRestaurante() {
   const { slug: idDaUrl } = useParams();
@@ -11,6 +12,12 @@ function PaginaCardapioRestaurante() {
     (restaurante) => restaurante.slug === idDaUrl
   )[0];
 
+  // ao montar, e ao ser desmontado
+  useEffect(() => {
+    document.title = restaurante.nome;
+    return () => (document.title = "");
+  }, []);
+
   const listaItens = restaurante.cardapio.filter((itemCardapio) =>
     itemCardapio.nome.toLowerCase().includes(busca.toLowerCase())
   );
@@ -18,7 +25,8 @@ function PaginaCardapioRestaurante() {
   return (
     <section>
       <Link to={"/"}>‹ Todos os restaurantes</Link>
-      <h1>{restaurante.nome}</h1>
+      <TituloPagina>{restaurante.nome}</TituloPagina>
+      <p></p>
       <p className="intro">{restaurante.descricao}</p>
       <input
         type="text"

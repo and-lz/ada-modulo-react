@@ -11,18 +11,23 @@
     estáLogado ? <ComponenteCasoEstejaLogado : <ComponenteNãoLogado />
   ```
 - Criar um JSON com as receitas passadas, e importar no componente usando:
+
   ```js
-  import nomeQueVocêQuiser from "caminho/para/o/jsoncriado.json"
+  import nomeQueVocêQuiser from "caminho/para/o/jsoncriado.json";
   ```
 
 - CSS não é necessário na avaliação do resultado, porém se quiserem praticar, é uma boa :)
 
-
 # segunda
+
 # formulários no react
+
 # useEffect()
 
 # quarta
-# teorias /  
+
+# teorias /
 
 # sexta
+
+- Busca, controlar a entrada e saída do campo de busca, e filtrar a lista exibida em tela de receitas.

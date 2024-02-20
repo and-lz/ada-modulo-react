@@ -1,36 +1,63 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CaixaRestaurante, { Restaurante } from "../components/CaixaRestaurante";
 import restaurantes from "../data/restaurantsAndItems.json";
+import TituloPagina from "../components/TituloPagina";
 
 function PaginaRestaurantes() {
   const [busca, definirBusca] = useState("");
+  const [dadosRestaurante, definirDadosRestaurante] = useState([]);
 
-  function buscar(restaurante: Restaurante) {
+  function buscar({ nome, descricao, categoria }: Restaurante) {
     return (
-      restaurante.nome.toLowerCase().includes(busca.toLowerCase()) ||
-      restaurante.categoria.toLowerCase().includes(busca.toLowerCase()) ||
-      restaurante.descricao.toLowerCase().includes(busca.toLowerCase())
+      valorAtendeABusca(nome) ||
+      valorAtendeABusca(categoria) ||
+      valorAtendeABusca(descricao)
     );
+  }
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      definirDadosRestaurante(restaurantes);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  function valorAtendeABusca(valor: string) {
+    return valor.toLowerCase().includes(busca.toLowerCase());
   }
 
   const listaRestaurantes = restaurantes.filter(buscar);
 
   return (
     <section>
-      <h1>Restaurantes</h1>
-      <input
-        type="text"
-        placeholder="Pesquisar pelo nome do restaurante, categoria ou descrição."
-        id="search"
-        onChange={(e) => definirBusca(e.target.value)}
-        value={busca}
-      />
-      <label htmlFor="search">🔎</label>
-      <ul className="grid" role="list">
-        {listaRestaurantes.map((restaurante) => (
-          <CaixaRestaurante key={restaurante.slug} restaurante={restaurante} />
-        ))}
-      </ul>
+      <TituloPagina>Restaurantes</TituloPagina>
+      {!dadosRestaurante.length ? <p>Carregando...</p> : ""}
+
+      {dadosRestaurante.length ? (
+        <div>
+          <input
+            type="text"
+            placeholder="Pesquisar pelo nome do restaurante, categoria ou descrição."
+            id="search"
+            value={busca}
+            onChange={(e) => definirBusca(e.target.value)}
+          />
+          <label htmlFor="search">🔎</label>
+          <ul className="grid" role="list">
+            {listaRestaurantes.map((restaurante) => (
+              <CaixaRestaurante
+                key={restaurante.slug}
+                restaurante={restaurante}
+              />
+            ))}
+          </ul>
+        </div>
+      ) : (
+        ""
+      )}
     </section>
   );
 }

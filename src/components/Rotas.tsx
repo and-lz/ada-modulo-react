@@ -1,4 +1,5 @@
 import PaginaCardapioRestaurante from "../pages/PaginaCardapioRestaurante";
+import PaginaLogin from "../pages/PaginaLogin";
 import PaginaRestaurantes from "../pages/PaginaRestaurantes";
 
 import { Route, Routes } from "react-router-dom";
@@ -8,6 +9,7 @@ function Rotas() {
     // Qual é o caminho, e o que será exibido naquele caminho
     <Routes>
       <Route path="/" element={<PaginaRestaurantes />} />
+      <Route path="/login" element={<PaginaLogin />} />
       <Route path="/:slug/cardapio" element={<PaginaCardapioRestaurante />} />
     </Routes>
   );
