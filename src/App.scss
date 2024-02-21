@@ -141,6 +141,7 @@ h1 {
   font-weight: 100;
   font-size: clamp(3.125rem, 3.464vw + 2.229rem, 5rem);
   line-height: clamp(4.688rem, 3.349vw + 3.821rem, 6.5rem);
+  margin-top: 5rem;
 }
 
 .grid {
@@ -277,4 +278,18 @@ header .row a {
 form {
   margin-top: 3rem;
   max-width: 400px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 0;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    background-color: var(--red-ifood);
+    color: var(--gray);
+    cursor: pointer;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  }
 }

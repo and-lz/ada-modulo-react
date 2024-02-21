@@ -1,22 +1,33 @@
+import { useNavigate } from "react-router-dom";
+import TituloPagina from "../components/TituloPagina";
+
 function PaginaLogin() {
-  function chamarApi(usuario, senha) {
-    console.log("Autorizado");
+  const navigate = useNavigate();
+  function chamarApi(usuario: string, senha: string) {
+    // apenas para desmontração, em uma aplicação real jamais essa verificação ficaria no frontend:
+    if (usuario === "admin" && senha === "123") return navigate("/");
+
+    alert("Usuário e/ou senha inválidos. Tente novamente.");
+  }
+
+  function aoEnviar(event) {
+    event.preventDefault();
+    const user = event.target[0].value;
+    const senha = event.target[1].value;
+    chamarApi(user, senha);
   }
 
   return (
-    <form
-      name="login"
-      onSubmit={(event) => {
-        event.preventDefault();
-        chamarApi(event.target[0].value, event.target[1].value);
-      }}
-    >
-      <input name="usuario" type="text" placeholder="usuário" />
-      <label htmlFor="">😃</label>
-      <input name="senha" type="password" id="senha" placeholder="senha" />
-      <label htmlFor="senha">🔑</label>
-      <button>Entrar</button>
-    </form>
+    <>
+      <TituloPagina>Entrar no sistema</TituloPagina>
+      <form name="login" onSubmit={aoEnviar}>
+        <input name="usuario" type="text" placeholder="usuário" />
+        <label htmlFor="">😃</label>
+        <input name="senha" type="password" id="senha" placeholder="senha" />
+        <label htmlFor="senha">🔑</label>
+        <button>Entrar</button>
+      </form>
+    </>
   );
 }
 
