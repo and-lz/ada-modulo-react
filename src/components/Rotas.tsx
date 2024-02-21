@@ -1,3 +1,4 @@
+import PaginaBusca from "../pages/PaginaBusca";
 import PaginaCardapioRestaurante from "../pages/PaginaCardapioRestaurante";
 import PaginaLogin from "../pages/PaginaLogin";
 import PaginaRestaurantes from "../pages/PaginaRestaurantes";
@@ -10,6 +11,7 @@ function Rotas() {
     <Routes>
       <Route path="/" element={<PaginaRestaurantes />} />
       <Route path="/login" element={<PaginaLogin />} />
+      <Route path="/busca" element={<PaginaBusca />} />
       <Route path="/:slug/cardapio" element={<PaginaCardapioRestaurante />} />
     </Routes>
   );
