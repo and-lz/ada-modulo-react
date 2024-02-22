@@ -3,31 +3,39 @@ import CaixaDeBusca from "../components/CaixaDeBusca";
 import TituloPagina from "../components/TituloPagina";
 import ListaDeRestaurantes from "../components/ListaDeRestaurantes";
 
-import restaurantes from "../data/restaurantsAndItems.json";
+import todosRestaurantes from "../data/restaurantsAndItems.json";
 import { Restaurante } from "../components/CaixaRestaurante";
 
 function PaginaBusca() {
-  const [busca, definirBusca] = useState("");
+  const [filtro, definirFiltro] = useState("");
 
-  function buscar({ nome, descricao, categoria }: Restaurante) {
+  function aplicarCriteriosDeBusca({
+    nome,
+    descricao,
+    categoria,
+  }: Restaurante) {
     return (
-      valorAtendeABusca(nome) ||
-      valorAtendeABusca(categoria) ||
-      valorAtendeABusca(descricao)
+      valorContemTextoFiltro(nome) ||
+      valorContemTextoFiltro(categoria) ||
+      valorContemTextoFiltro(descricao)
     );
   }
 
-  function valorAtendeABusca(valor: string) {
-    return valor.toLowerCase().includes(busca.toLowerCase());
+  function valorContemTextoFiltro(valor: string) {
+    return valor.toLowerCase().includes(filtro.toLowerCase());
   }
 
-  const listaRestaurantes = restaurantes.filter(buscar);
+  const restauranteFiltados = todosRestaurantes.filter(aplicarCriteriosDeBusca);
 
   return (
     <>
       <TituloPagina>Buscar</TituloPagina>
-      <CaixaDeBusca busca={busca} definirBusca={definirBusca} />
-      {busca ? <ListaDeRestaurantes restaurantes={listaRestaurantes} /> : <></>}
+      <CaixaDeBusca busca={filtro} definirBusca={definirFiltro} />
+      {filtro ? (
+        <ListaDeRestaurantes restaurantes={restauranteFiltados} />
+      ) : (
+        <></>
+      )}
     </>
   );
 }
